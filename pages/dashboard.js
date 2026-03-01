@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
-import "../styles/globals.css";
+
 
 export default function Dashboard() {
     const [user, setUser] = useState(null);
