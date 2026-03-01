@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Home() {
     const handleLogin = () => {
-        const clientId = process.env.NEXT_PUBLIC_DISCORD_CLIENT_ID;
-        const redirectUri = encodeURIComponent(process.env.NEXT_PUBLIC_REDIRECT_URI);
-        const scope = "identify guilds";
-        const responseType = "token";
+    const clientId = process.env.NEXT_PUBLIC_DISCORD_CLIENT_ID;
+    const redirectUri = encodeURIComponent(process.env.NEXT_PUBLIC_REDIRECT_URI);
+    const scope = "identify guilds";
+    const responseType = "token"; // use token for frontend-only OAuth
 
-        window.location.href = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;
-    };
+    window.location.href = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;
+};
 
     return (
         <div className="hero">
